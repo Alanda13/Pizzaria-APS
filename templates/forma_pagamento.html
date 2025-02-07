@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de Pagamento</title>    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Página de Forma de Pagamento */
+        #pedido-page {
+            background-color: #f39c12;  /* Fundo laranja */
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo do título igual ao "Cadastro Pizza" com tamanho ajustado */
+        h1 {
+            color: #d35400;  /* Cor do título igual ao "Cadastro Pizza" */
+            font-size: 32px; /* Tamanho menor */
+            font-weight: bold;
+            font-family: Arial, sans-serif; /* Mesma fonte */
+            background: none;  /* Remover fundo */
+            margin-top: 20px;
+            padding: 0;  /* Remover padding */
+            display: inline-block;  /* Manter o formato inline */
+        }
+
+        /* Tabela */
+        table {
+            width: 50%; /* Tabela mais compacta */
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: white; /* Cor branca */
+            font-family: 'Arial', sans-serif; /* Fonte limpa */
+            border-radius: 8px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd; /* Cor mais suave para as bordas */
+            border-radius: 4px;
+        }
+
+        th, td {
+            padding: 8px; /* Ajuste no padding */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f39c12;  /* Cabeçalho laranja */
+            color: white;
+        }
+
+        td {
+            background-color: #f39c12; /* Cor igual ao cabeçalho */
+            color: white; /* Texto branco */
+        }
+
+        /* Botões */
+        button {
+            background-color: #d35400;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Campo de troco */
+        #troco {
+            display: none;
+        }
+    </style>
+</head>
+<body id="pedido-page">
+    <h1>Forma de Pagamento</h1>
+    
+    <!-- Tabela com os dados do pedido -->
+    <table>
+        <tr>
+            <th>Sabor</th>
+            <td>{{ sabor }}</td>
+        </tr>
+        <tr>
+            <th>Tamanho</th>
+            <td>{{ tamanho }}</td>
+        </tr>
+        <tr>
+            <th>Quantidade</th>
+            <td>{{ quantidade }}</td>
+        </tr>
+        <tr>
+            <th>Preço Unitário</th>
+            <td>R$ {{ preco }}</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td>R$ {{ total }}</td>
+        </tr>
+    </table>
+    
+    <!-- Campo de Forma de Pagamento -->
+    <form method="POST">
+        <label for="pagamento">Escolha a forma de pagamento:</label>
+        <select name="pagamento" required>
+            <option value="especie">Espécie</option>
+            <option value="cartao">Cartão</option>
+            <option value="pix">Pix</option>
+        </select><br>
+
+        <div id="troco">
+            <label for="troco">Precisa de troco?</label>
+            <input type="text" name="troco" placeholder="Digite o valor" /><br>
+        </div>
+
+        <button type="submit">Confirmar Pagamento</button>
+    </form>
+
+    <script>
+        const selectPagamento = document.querySelector('select[name="pagamento"]');
+        const divTroco = document.getElementById('troco');
+        
+        selectPagamento.addEventListener('change', function() {
+            if (this.value === 'especie') {
+                divTroco.style.display = 'block';
+            } else {
+                divTroco.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

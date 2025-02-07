@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Realizado</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        h1 {
+            color: #d35400; /* Laranja escuro */
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        body {
+            background-color: #f39c12; /* Cor de fundo */
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        table {
+            width: 60%; /* Diminuindo a largura da tabela */
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 8px 10px; /* Diminui o padding das células */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f1c40f;
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9e4a0;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f7d288;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #f1c40f;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #e1b01f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pedido Realizado com Sucesso!</h1>
+    
+    <!-- Tabela com os detalhes do pedido -->
+    <table>
+        <tr>
+            <th>Sabor</th>
+            <td>{{ sabor }}</td>
+        </tr>
+        <tr>
+            <th>Tamanho</th>
+            <td>{{ tamanho }}</td>
+        </tr>
+        <tr>
+            <th>Quantidade</th>
+            <td>{{ quantidade }}</td>
+        </tr>
+        <tr>
+            <th>Preço Unitário</th>
+            <td>R$ {{ preco }}</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td>R$ {{ total }}</td>
+        </tr>
+        <tr>
+            <th>Forma de Pagamento</th>
+            <td>{{ pagamento }}</td>
+        </tr>
+        {% if troco %}
+        <tr>
+            <th>Troco Necessário</th>
+            <td>R$ {{ troco }}</td>
+        </tr>
+        {% endif %}
+    </table>
+
+    <!-- Botão para finalizar -->
+    <div class="button-container">
+        <a href="{{ url_for('home') }}" class="btn-voltar">Voltar para o Início</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalhos */
+h1 {
+    color: #d35400;
+    margin-top: 20px;
+}
+
+/* Formulários */
+form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botões */
+button {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 20px;
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+/* ===================== */
+/* Estilização da página inicial (index.html) */
+/* ===================== */
+#home-page {
+    /* Substitua pelo nome correto da imagem */
+    background-image: url('/static/img/b587aa6bcb4cbdfb6c9820ec40f911e8.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilizar o título na página inicial */
+#home-page h1 {
+    color: #ffcc00;
+    font-size: 42px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);  /* Fundo escuro semitransparente */
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* Estilizar o botão "Cadastrar Cliente" */
+#home-page .button-container {
+    margin-top: 30px;
+}
+
+#home-page .button-container a {
+    display: inline-block;
+    background-color: #ff4500;  /* Cor laranja-avermelhada */
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#home-page .button-container a:hover {
+    background-color: #ff6347;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
+/* Página de Cadastro de Cliente */
+#cadastro-cliente-page {
+    background-color: #f39c12;  /* Laranja diferente para o fundo */
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Outras estilizações */
+h1 {
+    color: #d35400;  /* Laranja escuro para o título */
+}
+
+/* Botões */
+button {
+    background-color: #d35400;  /* Cor laranja para o botão */
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Links */
+a {
+    display: block;
+    margin-top: 20px;
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+.btn-voltar {
+    background-color: #d35400; /* Laranja escuro */
+    color: white;
+    padding: 8px 16px;  /* Menor do que o tamanho padrão */
+    font-size: 14px;  /* Tamanho de fonte menor */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background-color: #e67e22; /* Cor mais clara ao passar o mouse */
+}

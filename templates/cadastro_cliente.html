@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Página de Cadastro de Cliente */
+        #cadastro-cliente-page {
+            background-color: #f39c12;  /* Laranja diferente para o fundo */
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo do formulário */
+        form {
+            background: white;
+            padding: 20px;
+            width: 100%; /* Ajuste para o formulário ocupar 100% da largura disponível */
+            max-width: 400px; /* Limita a largura máxima do formulário */
+            margin: 20px auto;  /* Adicionando margem acima e abaixo */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Cabeçalhos */
+        h1 {
+            color: #d35400;  /* Laranja escuro para o título */
+            margin-top: 20px;
+            margin-bottom: 20px;  /* Adicionando margem abaixo do título */
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-top: 10px;  /* Ajuste no espaço entre o rótulo e o campo */
+            font-weight: bold;
+        }
+
+        /* Campos de entrada */
+        input {
+            width: 100%; /* Mantém a largura 100% para os campos de entrada */
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;  /* Adicionando espaço abaixo de cada campo */
+            box-sizing: border-box; /* Inclui o padding e borda no cálculo da largura total */
+        }
+
+        /* Botões */
+        button {
+            background-color: #d35400;  /* Cor laranja para o botão */
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Links */
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #d35400;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body id="cadastro-cliente-page">
+    <h1>Cadastro de Cliente</h1>
+    <form method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" required><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" required><br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" required><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
