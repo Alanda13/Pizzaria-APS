@@ -1,8 +1,8 @@
 # Sistema de Controle de Pizzaria de Entrega em Domicílio
 
-Este projeto visa a modelagem e desenvolvimento de um sistema de controle para uma pizzaria de entrega em domicílio. O sistema permite que o atendente registre os pedidos de pizzas, incluindo informações sobre o cliente, a escolha do sabor e o tamanho das pizzas, além de gerenciar o banco de dados e a interface gráfica do sistema.
+Este projeto visa a modelagem e desenvolvimento de um sistema de controle para uma pizzaria. O sistema permite que o atendente registre os pedidos de pizzas, incluindo informações sobre o cliente, a escolha do sabor e o tamanho das pizzas, além de gerenciar o banco de dados e a interface gráfica do sistema.
 
-## Funcionalidades
+## 📌Funcionalidades
 
 - **Cadastro de Cliente**: O atendente pode registrar os dados do cliente, como nome, endereço e telefone.
 - **Anotação de Pedido**: O atendente registra o pedido do cliente, incluindo o sabor e o tamanho das pizzas.
@@ -11,33 +11,24 @@ Este projeto visa a modelagem e desenvolvimento de um sistema de controle para u
 - **Interface Gráfica**: A interface gráfica do sistema será desenvolvida utilizando HTML, CSS e Django.
 - **Banco de Dados**: O banco de dados será criado utilizando MongoDB ou PostgreSQL, conforme necessário.
 
-## Requisitos
 
-- Python 3.x
-- Django
-- MongoDB ou PostgreSQL
-- HTML, CSS
-
-## Estrutura do Projeto
-
-- **/pizzaria**: Diretório principal do projeto Django.
-  - **/models.py**: Modelos de dados, incluindo informações sobre o cliente e o pedido.
-  - **/views.py**: Lógica de visualização para as páginas do sistema.
-  - **/urls.py**: Configuração das URLs do sistema.
-  - **/templates/**: Arquivos HTML para a interface gráfica.
-  - **/static/**: Arquivos CSS para o estilo da aplicação.
-
-## Casos de Uso
+## 🛠 Tecnologias Utilizadas
+- **Python** (Flask para o backend)
+- **SQLite** (Banco de dados)
+- **HTML, CSS** (Interface gráfica)
 
 
-## Diagramas de Sequência
+## 📊 Casos de Uso e Diagramas de Sequência
+O sistema foi modelado com casos de uso e diagramas de sequência para melhor compreensão do fluxo de funcionamento.
 
-## Implementação das Classes
+- **Casos de Uso:**
+  - Cadastro de Cliente
+  - Cadastro de Pedido
+  - Escolha da Forma de Pagamento
+  - Confirmação do Pedido
 
-A seguir, serão implementadas as classes responsáveis pela gestão dos dados de clientes e pedidos.
+- **Diagramas de Sequência:** 
 
-- **Classe Cliente**: Responsável por armazenar as informações do cliente.
-- **Classe Pedido**: Responsável por armazenar os detalhes do pedido, incluindo pizzas e cliente.
 
 ## Método de Escolha
 
@@ -49,6 +40,6 @@ A interface será desenvolvida em HTML e CSS para garantir uma experiência de u
 
 ## Banco de Dados
 
-O banco de dados será projetado para armazenar as informações sobre clientes e pedidos. Será utilizado o MongoDB ou PostgreSQL, dependendo das necessidades do projeto.
+O banco de dados será projetado para armazenar as informações sobre clientes e pedidos. Foi utilizado o SQlite.
 
 
