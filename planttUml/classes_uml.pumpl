@@ -1,0 +1,55 @@
+@startuml
+
+class Cliente {
+  +id: int
+  +nome: string
+  +telefone: string
+  +endereco: string
+  +bairro: string
+  +registrar(): void
+}
+
+class Pedido {
+  +id: int
+  +cliente: Cliente
+  +sabor: string
+  +tamanho: string
+  +quantidade: int
+  +preco_unitario: float
+  +total: float
+  +pagamento: string
+  +troco: float
+  +registrar(): void
+}
+
+class Pizza {
+  +id: int
+  +sabor: string
+  +tamanho: string
+  +preco: float
+}
+
+class BancoDeDados {
+  +conectar(): void
+  +executarConsulta(sql: string): any
+  +fechar(): void
+}
+
+class InterfaceGrafica {
+  +mostrarTelaCadastroCliente(): void
+  +mostrarTelaCadastroPizza(): void
+  +mostrarTelaPagamento(): void
+  +mostrarResumoPedido(): void
+}
+
+class Sistema {
+  +iniciar(): void
+}
+
+Cliente "1" -- "0..*" Pedido
+Pedido "1" -- "1" Pizza
+Pedido "1" -- "1" Cliente
+Sistema "1" -- "1" InterfaceGrafica
+Sistema "1" -- "1" BancoDeDados
+
+@enduml
