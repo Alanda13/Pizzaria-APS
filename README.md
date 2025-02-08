@@ -29,7 +29,7 @@ O sistema foi modelado com **casos de uso** e **diagramas de sequência** para m
 📄 Diagramas de sequência: [Acesse aqui](https://docs.google.com/document/d/1PqTYW9N0tr7gelorndRDkJUNAdmPRdBy461nHSdZAP4/edit?tab=t.0)
 
 ### Implementação das Classes via código UML: 
- [Acesse aqui]([Acesse aqui](https://docs.google.com/document/d/1PqTYW9N0tr7gelorndRDkJUNAdmPRdBy461nHSdZAP4/edit?tab=t.0))
+ ([Acesse aqui](https://docs.google.com/document/d/1PqTYW9N0tr7gelorndRDkJUNAdmPRdBy461nHSdZAP4/edit?tab=t.0))
 
 
 ## 🎯 Método de Escolha
